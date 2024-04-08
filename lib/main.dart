@@ -1,5 +1,8 @@
 import 'package:check_bloc/Bloc/favourite_app_bloc.dart';
 import 'package:check_bloc/UI/favouriteApp.dart';
+import 'package:check_bloc/UI/home%20page.dart';
+import 'package:check_bloc/UI/post.dart';
+import 'package:check_bloc/posts/posts_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,6 +24,9 @@ class MyApp extends StatelessWidget {
     BlocProvider(
     create: (context) => FavoriteAppBloc(FavoriteRepository() )
     ),
+          BlocProvider(
+              create: (context) => PostsBloc()
+          ),
 
 
     ],
@@ -33,7 +39,7 @@ class MyApp extends StatelessWidget {
 
         useMaterial3: true,
       ),
-    home:  favoriteApp(),
+    home:  post(),
     )
     );
   }

@@ -88,6 +88,7 @@ class _favoriteAppState extends State<favoriteApp> {
           }
         },
       ),
+
     );
   }
 }
